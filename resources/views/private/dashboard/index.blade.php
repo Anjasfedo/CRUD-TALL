@@ -3,8 +3,8 @@
 @section('content')
 <livewire:layouts.breadcrumb />
 
-    <div class="flex justify-between">
-        <livewire:charts.pie-chart />
-        <livewire:charts.bar-chart />
+    <div class="flex justify-between ">
+        <x-charts.pie-chart />
+        <x-charts.bar-chart />
     </div>
 @endsection
