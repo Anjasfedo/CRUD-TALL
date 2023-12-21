@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>anjas</h1>
+<livewire:layouts.breadcrumb />
+
+    <div class="flex justify-between">
+        <livewire:charts.pie-chart />
+        <livewire:charts.bar-chart />
+    </div>
 @endsection
