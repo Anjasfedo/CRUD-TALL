@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'private.dashboard.index')->name('home');
+Route::view('/', 'private.category.index')->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
