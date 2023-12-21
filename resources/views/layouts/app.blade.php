@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('body')
-    <livewire:layouts.nav-bar />
+    <x-layouts.navigation />
     <livewire:layouts.side-bar />
     <div class="p-4 sm:ml-64">
         <div class="p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 mt-14">
@@ -12,7 +12,7 @@
                     {{ $slot }}
                 @endisset
             </div>
-            <livewire:layouts.footer />
+            <x-layouts.footer />
         </div>
     </div>
 @endsection
