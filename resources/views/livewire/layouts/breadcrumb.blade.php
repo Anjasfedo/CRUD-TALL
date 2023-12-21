@@ -15,5 +15,5 @@
             <x-layouts.crumb />
         </ol>
     </nav>
-    <x-layouts.header-section />
+    <x-layouts.header-section :header="$header" />
 </div>

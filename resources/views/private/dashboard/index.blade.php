@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<livewire:layouts.breadcrumb />
+<livewire:layouts.breadcrumb header="Dashboard" />
 
     <div class="flex justify-between ">
         <x-charts.pie-chart />
