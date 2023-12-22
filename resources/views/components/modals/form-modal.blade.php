@@ -1,4 +1,4 @@
-@props(['label', 'id'])
+@props(['label', 'id', 'method'])
 
 <div id="{{ $id }}" tabindex="-1" aria-hidden="true"
     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -23,18 +23,20 @@
             </div>
 
             <!-- Modal body -->
-            <form class="p-4 md:p-5">
+            <form class="p-4 md:p-5" wire:submit="{{ $method }}">
                 <div class="grid grid-cols-2 gap-4 mb-4">
 
                     <div class="col-span-2">
                         <x-forms.label label="Name" for="inputName" />
-                        <x-forms.input type="text" id="inputName" name="name"
+                        <x-forms.input type="text" id="inputName" name="name" wire:model.blur='name'
                             placeholder="Input {{ $label }} Name" />
+                            <div>@error('title') {{ $message }} @enderror</div>
                     </div>
                     <div class="col-span-2">
                         <x-forms.label label="Description" for="inputDescription" />
-                        <x-forms.textarea id="inputDescription" name="description"
+                        <x-forms.textarea id="inputDescription" name="description" wire:model.blur='description'
                             placeholder="Input {{ $label }} Description" />
+                            <div>@error('description') {{ $message }} @enderror</div>
                     </div>
 
                 </div>
