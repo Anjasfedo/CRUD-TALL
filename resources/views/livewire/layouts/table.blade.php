@@ -26,11 +26,12 @@
                     </td>
                 @endforeach
                 <td class="px-6 py-4 space-x-3">
-                    <button data-modal-target="detailModal" data-modal-show="detailModal" type="button"
-                        class="font-medium text-green-600 dark:text-green-500 hover:underline">Detail</button>
+                    {{-- <button data-modal-target="detailModal" data-modal-show="detailModal" type="button"
+                        class="font-medium text-green-600 dark:text-green-500 hover:underline">Detail</button> --}}
+                        <button @click="openCreateModal = !openCreateModal">Expand</button>
 
-                    <button href="#" type="button" data-modal-target="editModal" data-modal-show="editModal"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button>
+                    {{-- <button href="#" type="button" data-modal-target="editModal" data-modal-show="editModal"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</button> --}}
 
                     <button data-modal-target="deleteModal" data-modal-toggle="deleteModal"
                         class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
