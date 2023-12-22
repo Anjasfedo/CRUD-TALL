@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/home', 'private.category.index')->name('home');
+Route::view('/home', 'private.dashboard.index')->name('home');
 
 Route::resource('/', CategoriesController::class);
 

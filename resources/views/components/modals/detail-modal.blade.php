@@ -1,6 +1,6 @@
 @props(['label'])
 
-<div id="crud-modal" tabindex="-1" aria-hidden="true"
+<div id="detailModal" tabindex="-1" aria-hidden="true"
     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-md max-h-full p-4">
         <!-- Modal content -->
@@ -8,7 +8,7 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Create New {{ $label }}
+                    {{ $label }}
                 </h3>
                 <button type="button"
                     class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white"
@@ -28,11 +28,13 @@
 
                     <div class="col-span-2">
                         <x-forms.label label="Name" for="inputName" />
-                        <x-forms.input type="text" id="inputName" name="name" placeholder="Input {{ $label }} Name" />
+                        <x-forms.input type="text" id="inputName" name="name"
+                            placeholder="Input {{ $label }} Name" />
                     </div>
                     <div class="col-span-2">
                         <x-forms.label label="Description" for="inputDescription" />
-                        <x-forms.textarea id="inputDescription" name="description" placeholder="Input {{ $label }} Description" />
+                        <x-forms.textarea id="inputDescription" name="description"
+                            placeholder="Input {{ $label }} Description" />
                     </div>
 
                 </div>

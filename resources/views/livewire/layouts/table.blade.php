@@ -1,6 +1,6 @@
 <div>
     <table class="w-full text-left text-gray-500 text-md rtl:text-right dark:text-gray-400">
-        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+        <button data-modal-target="createModal" data-modal-toggle="createModal"
             class="block mb-6 mt-12 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button">
             Create
@@ -39,5 +39,4 @@
         @endforeach
         </tbody>
     </table>
-    <x-modals.create-modal label="Category" />
 </div>
